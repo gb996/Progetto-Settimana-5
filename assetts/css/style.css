@@ -32,7 +32,7 @@ a {
   body:has(.overlay:not([hidden])) {
     overflow: hidden;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -421,3 +421,6 @@ position: absolute;
 .closeModal {
 	cursor: pointer;
 }
+
+
+
