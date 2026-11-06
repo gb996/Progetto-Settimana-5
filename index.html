@@ -14,19 +14,20 @@
   <div class="container">
     <header id="site-header">
       <!-- Logo + nav -->
-
-      <span class="logo"><i class="fa-solid fa-seedling"></i> Bloom</span>
-      <div class="divNav">
-        <ul id="navList">
-          <li>Servizi</li>
-          <li>Lavori</li>
-          <li>Team</li>
-          <li>Contatti
-          </li>
-        </ul>
-        <button class="darkMode">
-          <i class="fa-solid fa-moon"></i></button>
-      </div>
+      <nav>
+        <span class="logo"><i class="fa-solid fa-seedling"></i> Bloom</span>
+        <div class="divNav">
+          <ul id="navList">
+            <li><a href="#divServizi">Servizi</a></li>
+            <li><a href="#services">Lavori</a></li>
+            <li><a href="#divTeam">Team</a></li>
+            <li><a href="#">Contatti</a>
+            </li>
+          </ul>
+          <button class="darkMode">
+            <i class="fa-solid fa-moon"></i></button>
+        </div>
+      </nav>
     </header>
 
     <main>
@@ -40,7 +41,7 @@
         </div>
       </section>
 
-      <section class="services">
+      <section id="services">
         <!-- 3 card servizi: icona + titolo + descrizione -->
         <div class="divServices">
           <h3>I nostri lavori</h3>
@@ -63,82 +64,95 @@
             <div class="card">
               <article class="imgServices"><img src="assetts/img/works.png" alt=""></article>
             </div>
+          </div>
+
+          <div id="divServizi">
+
+            <h3>I nostri servizi</h3>
+            <div class="card">
+              <span>
+                penna
+              </span>
+              <h3>Identità visiva</h3>
+              <p>Logo, palette, tipografia e linee guida per un brand coerente , riconoscibile e duraturo </p>
+            </div>
+            <div class="card">
+              <span>
+                pc
+              </span>
+              <h3>Web design</h3>
+              <p>Siti vetrina e landing page responsive, accessibili e ottimizzate per dispositivi mobili </p>
+            </div>
+            <div class="card">
+              <span>
+                foto
+              </span>
+              <h3>Motion graphics</h3>
+              <p>Animazioni e brevi video per raccontare il prodoto, i social e le campagne pubblicitarie</p>
+            </div>
 
 
-            <div class="divServizi">
+            <div id="divTeam">
 
               <h3>I nostri servizi</h3>
               <div class="card">
-                <span>
-                  penna
-                </span>
-                <h3>Identità visiva</h3>
-                <p>Logo, palette, tipografia e linee guida per un brand coerente , riconoscibile e duraturo </p>
+                <div class="spanCard">
+                  GR
+                </div>
+                <h4>Giulia Rossi</h4>
+                <p>Cura l'identitá visiva dei progetti, dai concept alla consegna finale</p>
               </div>
               <div class="card">
-                <span>
-                  pc
-                </span>
-                <h3>Web design</h3>
-                <p>Siti vetrina e landing page responsive, accessibili e ottimizzate per dispositivi mobili </p>
+                <div class="spanCard">
+                  MB
+                </div>
+                <h4>Marco Bianchi</h4>
+                <p>Progetta interfacce responsive e accessibili, con occhio al codice</p>
               </div>
               <div class="card">
-                <span>
-                  foto
-                </span>
-                <h3>Motion graphics</h3>
-                <p>Animazioni e brevi video per raccontare il prodoto, i social e le campagne pubblicitarie</p>
-              </div>
-
-
-              <div class="divTeam">
-
-                <h3>I nostri servizi</h3>
-                <div class="card">
-                  <div class="spanCard">
-                    GR
-                  </div>
-                  <h4>Giulia Rossi</h4>
-                  <p>Cura l'identitá visiva dei progetti, dai concept alla consegna finale</p>
+                <div class="spanCard">
+                  SV
                 </div>
-                <div class="card">
-                  <div class="spanCard">
-                    MB
-                  </div>
-                  <h4>Marco Bianchi</h4>
-                  <p>Progetta interfacce responsive e accessibili, con occhio al codice</p>
-                </div>
-                <div class="card">
-                  <div class="spanCard">
-                    SV
-                  </div>
-                  <h4>Sara Verdi</h4>
-                  <p>Dá movimento ai brand con Animazioni, video brevi e contenuti social</p>
-                </div>
-
-              </div>
-            </div>
-            <div class="Dicono card">
-              <div class="spanCard">
-                SV
-              </div>
-              <h3>Dicono di noi</h3>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-              <div>
                 <h4>Sara Verdi</h4>
                 <p>Dá movimento ai brand con Animazioni, video brevi e contenuti social</p>
               </div>
+
             </div>
           </div>
+          <div class="contCard">
+            <h3>Dicono di noi</h3>
+            <div class="sectionCard">
+              <div class=" card">
+                <div class="spanCard">
+                  SV
+                </div>
+
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip
+                  ex
+                  ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt
+                  mollit anim id est laborum."</p>
+                <div>
+                  <h4>Sara Verdi</h4>
+                  <p>Dá movimento ai brand con Animazioni, video brevi e contenuti social</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </section>
-     
+
     </main>
 
     <footer id="site-footer">
       <span class="logo"><i class="fa-solid fa-seedling"></i> Bloom</span>
       <p>Studio di design fondato nel 2026</p>
-      <p>@ 2026 Bloom</p>
+
       <div footerSpan>
         <button class="footerBtn">
           <i class="fa-solid fa-pen-nib"></i>
@@ -149,6 +163,7 @@
         <button class="footerBtn">
           <i class="fa-solid fa-film"></i>
         </button>
+        <p>@ 2026 Bloom</p>
       </div>
 
     </footer>

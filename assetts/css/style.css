@@ -42,7 +42,7 @@ a {
   justify-content: space-around;
   flex-direction: column;
   padding-top: 10px;
-
+  top: 0;
 
   #logo {
     font-size: 1.5rem;
@@ -64,6 +64,17 @@ a {
     align-items: center;
   }
 
+  a{
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+  a:hover, .darkMode:hover {
+    background-color: #E8F5E9;
+    transform: translate(-4px);
+  }
+
   .darkMode {
     width: 40px;
     height: 40px;
@@ -79,14 +90,16 @@ a {
   color: white;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   height: 600px;
+
 
   .divHero {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 80%;
-    padding-top: 200px;
+    width: 70vh;
+    /* padding-top: 200px; */
   }
 
   .divHero p {
@@ -100,23 +113,35 @@ a {
     border-radius: 40px;
     margin-top: 30px;
   }
+  .heroBtn:hover{
+    transform: translateY(6px);
+  }
 }
 
+.scrolled{
+  
+}
 /*services*/
-.services {
-  display: flex;
-  align-items: center;
+#services {
   background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 
+  text-align: center;
 
   h3 {
     color: #1F7A4D;
   }
 
-  .divServices {
+  .divCard,
+  .sectionCard {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: center;
+    text-align: center;
     justify-content: center;
   }
 
@@ -130,7 +155,9 @@ a {
     width: 100%;
     height: 100%;
   }
+
 }
+
 
 /*card---------------------------*/
 .card {
@@ -141,18 +168,24 @@ a {
   padding: 40px;
   display: flex;
   flex-direction: column;
+
 }
 
+.card:hover{
+transform: translateY(-8px);
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
 /*-----------------------------*/
-.divServizi {
+#divServizi {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-.divTeam {
+#divTeam {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -170,6 +203,10 @@ a {
   align-self: center;
 }
 
+.contCard {
+  text-align: center;
+  margin-top: 100px;
+}
 
 footer {
   display: flex;
@@ -178,7 +215,7 @@ footer {
   justify-content: center;
   background-color: #1A1A1A;
   height: 300px;
-  color: #1F7A4D;
+  color: #5CD699;
 }
 
 .footerSpan {
@@ -194,19 +231,4 @@ footer {
   background-color: #2A2A2A;
   border-radius: 50%;
   border: none;
-}
-
-.dicono {
-  display: flex;
-  margin: 0 auto;
-
-  .spanCard {
-    height: 80px;
-    width: 80px;
-  }
-
-  h3 {
-    color: #1F7A4D;
-  }
-
 }
