@@ -27,6 +27,17 @@ a {
   text-decoration: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
 
 /* Aggiungi qui le tue regole, mobile-first. */
 /*header*/
@@ -39,7 +50,7 @@ a {
   height: 120px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   padding-top: 10px;
   top: 0;
@@ -49,10 +60,21 @@ a {
 
   }
 
+  .divLogo {
+    display: flex;
+    justify-content: center;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
   .divNav {
     display: flex;
+
     gap: 20px;
     align-items: center;
+    justify-content: space-between;
   }
 
   #navList {
@@ -64,15 +86,18 @@ a {
     align-items: center;
   }
 
-  a{
-  font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 8px;
-}
+  a {
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 8px;
+  }
 
-  a:hover, .darkMode:hover {
+  a:hover,
+  .darkMode:hover {
     background-color: #E8F5E9;
     transform: translate(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
 
   .darkMode {
@@ -99,7 +124,6 @@ a {
     align-items: center;
     flex-direction: column;
     width: 70vh;
-    /* padding-top: 200px; */
   }
 
   .divHero p {
@@ -113,17 +137,15 @@ a {
     border-radius: 40px;
     margin-top: 30px;
   }
-  .heroBtn:hover{
+
+  .heroBtn:hover {
     transform: translateY(6px);
   }
 }
 
-.scrolled{
-  
-}
 /*services*/
 #services {
-  background-color: black;
+  background-color: #FAFAFA;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -140,8 +162,8 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: center;
-    text-align: center;
+    /* align-items: center; */
+    /* text-align: center; */
     justify-content: center;
   }
 
@@ -168,27 +190,21 @@ a {
   padding: 40px;
   display: flex;
   flex-direction: column;
-
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.card:hover{
-transform: translateY(-8px);
-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
+
 /*-----------------------------*/
-#divServizi {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
+#divServizi,
 #divTeam {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  align-items: center;
   justify-content: center;
   text-align: center;
 }
@@ -218,10 +234,7 @@ footer {
   color: #5CD699;
 }
 
-.footerSpan {
-  display: flex;
-  gap: 30px;
-}
+
 
 .footerBtn {
   width: 40px;
@@ -231,4 +244,130 @@ footer {
   background-color: #2A2A2A;
   border-radius: 50%;
   border: none;
+}
+
+.divLogoFoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#site-footer .footerSpan button:hover{
+background-color: #1F7A4D;
+cursor: pointer;
+}
+
+@media (min-width:768px) {
+  #site-header {
+    height: 70px;
+  }
+
+  #site-header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px;
+  }
+
+  .divCard .card {
+    max-width: 45%;
+  }
+
+  .titoloServizi {
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  #divServizi,
+  #divTeam {
+    padding: 25px;
+
+  }
+
+  #divServizi .card span i{
+    font-size: 2.0rem;
+    color: #1F7A4D ;
+  }
+
+  .card {
+    width: 40%;
+    flex-grow: 1;
+  }
+
+.spanCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+  #site-footer {
+    height: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footerSpan {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media (min-width:992px) {
+
+  #site-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .divCard .card , .card {
+    max-width: 30%;
+    min-height: 320px;
+    
+  }
+
+  
+}
+.scrolled {
+  background-color: #1F7A4D;
+  color: white;
+}
+
+/*modale*/
+.overlay {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2000;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 25px;
+	border-radius: 10px;
+	max-width: 480px;
+}
+
+#openModal {
+	font-size: 1.2rem;
+	background-color: cyan;
+	border-style: double;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#openModal:hover {
+	background-color: green;
+	color: white;
+}
+
+.closeModal {
+	cursor: pointer;
 }
